@@ -16,7 +16,7 @@ generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
 
-    var length = prompt("Enter the length of the password you want.\n(Has to be between 8 and 128 characters)");
+    var length = prompt("Enter the length of the password you want\n(Has to be between 8 and 128 characters)");
 
     if (!(length >= 8 && length <= 128)) {
         alert("Length has to be between 8 to 128 characters.");
@@ -47,6 +47,10 @@ function generatePassword() {
     if (specialMessage == true) {
         var specialCharacter = " !#$%&()*+,=./:;<=>?@[\\]\"\'^_`{|}~"
         allowedCharacters += specialCharacter;
+    }
+    if (allowedCharacters == "") {
+        alert("You need to confirm at least one criteria to generate password");
+        return "";
     }
 
     for (var i = 0; i < length; i++) {
