@@ -23,13 +23,15 @@ function generatePassword() {
     var specialMessage = confirm("Do you want to include special characters in your password?");
     var allowedCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var password = "";
-
+    allowedCharacters[47];
 
     if (lowercaseMessage == true) {
+        // This will take the set of lowercase letters and add it to that allowedCharacters variable
         var lowerLetters = "abcdefghijklmnopqrstuvwxyz";
         allowedCharacters += lowerLetters;
     }
     if (uppercaseMessage == true) {
+        // Same setup as lowercase letters, but for uppercase
         var upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         allowedCharacters += upperLetters;
     }
@@ -43,10 +45,13 @@ function generatePassword() {
     }
 
     for (var i = 0; i < length; i++) {
-
-        var lowerCharacter = lowerLetters[Math.floor(Math.random() * lowerLetters.length)];
-        password += lowerCharacter;
+        // allowedCharacters has an index with the math formula inside it to select a 
+        // random index based on the length chosen by user
+        // allowedCharacters[47];
+        var randomCharacter = allowedCharacters[Math.floor(Math.random() * allowedCharacters.length)];
+        password += randomCharacter;
     }
+
     return password;
 
 }
