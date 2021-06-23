@@ -21,9 +21,8 @@ function generatePassword() {
     var uppercaseMessage = confirm("Do you want to include uppercase letters in your password?");
     var numbersMessage = confirm("Do you want to include numbers in your password?");
     var specialMessage = confirm("Do you want to include special characters in your password?");
-    var allowedCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var allowedCharacters = "";
     var password = "";
-    allowedCharacters[47];
 
     if (lowercaseMessage == true) {
         // This will take the set of lowercase letters and add it to that allowedCharacters variable
